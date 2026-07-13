@@ -6,7 +6,8 @@ const Templates = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-blue-50 via-indigo-50/50 to-indigo-100 flex flex-col font-sans text-gray-800">
+    // Tambahkan pb-10 di sini agar tidak mepet bawah
+    <div className="min-h-screen bg-gradient-to-b from-blue-50 via-indigo-50/50 to-indigo-100 flex flex-col font-sans text-gray-800 pb-10">
       
       {/* Top Navigation */}
       <header className="w-full flex justify-center gap-6 pt-8 text-sm font-medium">
@@ -21,7 +22,7 @@ const Templates = () => {
       </header>
 
       {/* Main Content */}
-      <main className="flex-grow flex flex-col items-center pt-12 px-6">
+      <main className="flex-grow flex flex-col items-center pt-12 px-6 pb-12">
         <h1 className="text-3xl font-medium tracking-tight mb-2">
           [<span className="italic font-bold">Choose</span>] Your Layout!
         </h1>
@@ -58,6 +59,11 @@ const Templates = () => {
 
         </div>
       </main>
+
+      {/* Footer ditambahkan di sini, otomatis terdorong ke bawah berkat flex-grow pada main */}
+      <footer className="w-full text-center text-gray-400 text-xs mt-auto">
+        <p>&copy; 2026 All Right Reserved</p>
+      </footer>
 
     </div>
   );
